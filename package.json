@@ -1,0 +1,23 @@
+{
+  "name": "horizon-hotels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "imask": "^3.4.0",
+    "parcel": "^2.5.0"
+  },
+  "dependencies": {
+    "@parcel/resolver-glob": "^2.5.0",
+    "@parcel/transformer-image": "^2.5.0",
+    "corejs": "^1.0.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

@@ -1,0 +1,55 @@
+.reservation{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+
+   
+    &__form-container{
+        flex: 1;
+        display: grid;
+        place-items: center;
+    }
+
+    &__form{
+        width: 50%;
+    }
+
+    &__form-group{
+        &:not(:last-child){
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .aside{
+        flex-basis: 35vw;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(5,1fr);
+
+        .hotel{
+            text-transform: uppercase;
+            grid-column-start: 1;
+            grid-row-start: 5;
+            color:white;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+       
+
+        &__overlay{
+            grid-area:1 / 1 / -1 / -1 ;
+            background-color: rgba($color-primary,.7);
+        }
+
+        &__img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+
+            grid-area:1 / 1 / -1 / -1 ;
+        }
+    }
+}

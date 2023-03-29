@@ -1,0 +1,40 @@
+@mixin absCentre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin twelveGridSystem {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:repeat(7, 1fr);
+}
+// MEDIA QUERY MANAGER
+/*
+0 - 600px: PHONE
+600 - 900PX: Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big Desktop
+*/
+
+
+@mixin respond($breakpoint){
+    @if ($breakpoint == phone) {
+        @media screen and (max-width:37.5em){@content};
+    }
+
+    @if($breakpoint == tab-port){
+        @media screen and (max-width: 56.25em){@content};
+    }
+
+    @if ($breakpoint == tab-land ) {
+        @media only screen and (max-width:75em) {@content};
+    }
+
+    @if ($breakpoint == big-desktop ) {
+        @media only screen and (min-width:112.5em) {@content};
+    }
+}
+

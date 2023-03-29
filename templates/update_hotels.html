@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}
+  Simple CRUD with Flask
+{% endblock title %}
+
+{% block content %}
+
+<div class="content">
+  <h1>Hotel Manager</h1>
+
+  <form action="" method="post">
+   {{ form.hidden_tag() }}
+   <div>
+      {{ form.city(value=hotel.city,placeholder="",
+      style='width: 50%;
+      font-weight: bold;
+      padding: 12px 20px ;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box') }}
+      {% for error in form.city.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+   </div>
+   <br>
+   <div>
+      {{ form.capacity(value=hotel.capacity,placeholder="",
+      style='width: 50%;
+      font-weight: bold;
+      padding: 12px 20px ;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box') }}
+      {% for error in form.capacity.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+   </div>
+   <div>
+      {{ form.available }}
+      {% for error in form.available.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+   </div>
+   <br>
+   <div>
+      {{ form.peak_rate(placeholder="peak rate",
+      style='width: 50%;
+      font-weight: bold;
+      padding: 12px 20px ;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box') }}
+      {% for error in form.peak_rate.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+   </div>
+   <br>
+   <div>
+      {{ form.off_peak_rate(placeholder="off peak rate",
+      style='width: 50%;
+      font-weight: bold;
+      padding: 12px 20px ;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box') }}
+      {% for error in form.off_peak_rate.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+   </div>
+   <br>
+   <br>
+   <div>
+      {{ form.description(placeholder="Description",
+      style='width: 50%;
+      font-weight: bold;
+      padding: 12px 20px ;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box') }}
+      {% for error in form.description.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+   </div>
+   <br>
+   <div>{{ form.submit(
+      style ='background-color: #4CAF50;
+      color: white;
+      width: 50%;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px') }}
+   </div>
+</form>
+</div>
+  
+{% endblock content %}

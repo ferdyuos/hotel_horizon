@@ -1,0 +1,67 @@
+
+.btn-ctrl{
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+    background-color: $color-secondary;
+    color: white;
+    border-radius: 50%;
+    &--inverted{
+        background-color: transparent;
+        color:  $color-secondary;
+    }
+
+    &__icon{
+        width: 2.5rem;
+        height: 2.5rem;
+        fill:currentColor;
+    }
+}
+
+.btn,
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    margin-top: 1.5rem ;
+    padding: 1.5rem 4rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $color-primary;
+    border: none;
+    
+    &:hover{
+        background-color: darken($color-primary, 5%);
+    }
+    
+}
+
+
+   
+   
+.btn-back{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    border: none;
+    color: $color-primary;
+    background-color: transparent;
+    outline: 2px solid currentColor;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+
+    &:hover{
+        transform: translateX(-5px);
+    }
+    
+
+    svg{
+        width: 4rem;
+        height: 4rem;
+        fill: currentColor;
+
+    }
+}
+
+
+

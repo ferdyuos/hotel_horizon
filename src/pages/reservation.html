@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Horizon Hotels | Make Reservation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='/src/sass/main.scss'>
+    <script src="../js/reservationController.js" type="module"></script>
+
+</head>
+<body>
+  <div class="reservation">
+    <button class="btn-back">
+        <svg>
+          <use xlink:href="/src/images/icon/sprite.svg#icon-chevron-left"></use>
+        </svg>
+    </button>
+
+    <div class="reservation__form-container">
+      <form class="reservation__form">
+
+        <h2 class="heading-primary">Reserve room</h2>
+
+        <div class="resevation__form-group">
+          <label for="check-in" class="form__label">Check in</label>
+            <div class="form__group">
+                <input type="datetime-local" id="check-in" name="date" class="form__input" required>
+            </div>
+        </div>
+
+        <div class="resevation__form-group">
+          <label for="room-type" class="form__label">Room type</label>
+            <div class="form__group">
+                <select id="room-type" name="type" class="form__input" required>
+                  <option value="Standard">Standard Room</option>
+                  <option value="Double">Double Room</option>
+                  <option value="Family">Family Room</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="resevation__form-group">
+          <label for="num-guest" class="form__label">Guest number</label>
+            <div class="form__group">
+                <input type="number" name="number_people" id="num-guest" class="form__input" placeholder="1" min="1" max="1" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Reserve now!</button>
+
+
+
+      </form>
+    </div>
+
+    <aside class="aside">
+        <img src="/src/images/room-4.jpg" alt="aside image" class="aside__img">
+        <div class="aside__overlay"></div>
+        <h1 class="hotel"></h1>
+    </aside>
+  </div>
+</body>
+</html>

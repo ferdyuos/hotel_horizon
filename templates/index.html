@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+  Simple CRUD with Flask
+{% endblock title %}
+
+{% block content %}
+
+<div>
+  
+  <a href="{{ url_for('home') }}">Home</a>
+  {% if current_user.is_anonymous %}
+  <a href="{{ url_for('login') }}">Login</a>
+  {% else %}
+  <p>Welcome {{current_user.username}}</p>
+  <a href="{{ url_for('hotel_management') }}">Hotel Management</a><br><br>
+  <a href="{{ url_for('all_book') }}">All Bookings</a><br><br>
+  <a href="{{ url_for('all_user') }}">All Users</a><br><br>
+
+  <a href="{{ url_for('logout') }}">Logout</a>
+  {% endif %}
+  
+</div>
+{% endblock content %}

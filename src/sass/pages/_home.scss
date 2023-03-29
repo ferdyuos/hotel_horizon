@@ -1,0 +1,223 @@
+.main{
+    width: 100%;
+    position: relative;
+}
+
+.about{
+    background-color: $color-grey-light-1;
+    padding: 10rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include respond(tab-land){
+        padding: 10rem 5rem;
+       
+    }
+    @include respond(tab-port){
+        padding: 10rem 4rem;
+       justify-content: space-evenly;
+       gap: 5rem;
+    }
+
+    @include respond(phone){
+        padding: 7rem 4rem;
+
+     }
+    
+
+    &__desc{
+        margin-bottom: 2.5rem;
+        
+    }
+
+    &__img{
+        width: 40rem;
+        height: 40rem;
+        object-fit: cover;
+        box-shadow: -53px 52px 0px 8px #f2f2f2;
+        -webkit-box-shadow: -53px 52px 0px 8px #f2f2f2;
+        -moz-box-shadow: -53px 52px 0px 8px #f2f2f2;
+        @include respond(tab-land){
+            width: 30rem;
+            height: 30rem;
+        }
+        @include respond(tab-port){
+            width: 25rem;
+            height: 25rem;
+         }
+         @include respond(phone){
+           display: none;
+        }
+       
+    }
+
+ 
+
+    .text-box{
+        width: 50rem;
+        @include respond(tab-port){
+            width: 40%;
+        }
+        @include respond(phone){
+            width: 60%;
+            margin: 0 auto;
+            text-align: left
+        }
+    }
+}
+
+.display-rooms{
+    padding: 8rem 0;
+
+   
+
+    &__top{
+        padding:0 8rem;
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 8rem;
+
+        @include respond(tab-port){
+            grid-template-columns: auto 2fr 1fr;
+   
+        }
+        @include respond(phone){
+            grid-template-columns: 2fr 1fr;
+        }
+
+       .paragraph{
+            @include respond(phone){
+                display: none;
+            }
+       }
+
+        div:last-child{
+            align-self: stretch;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 3rem;
+        }
+    }
+
+    .room-gallery-cont{
+        width:  100%;
+        height:40rem;
+        position: relative;
+        padding: 0 8rem;
+        overflow: hidden;
+
+    }
+
+    .room-gallery{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6,5rem);
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform .5s ease-in-out;
+
+
+        &__img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            grid-row: 1 / -1;
+        }
+
+        &__card{
+            width: 40rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-secondary;
+            padding: 3em;
+            color: white;
+        }
+
+        &__title{
+            display: inline-block;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        &__desc{
+            font-size:1.2rem ;
+        }
+        &__btn{
+            margin-top: 1.5rem;
+            display: inline-block;
+            display: inline-block;
+            padding: 8px;
+            text-decoration: none;
+            color: white;
+            background-color: $color-primary;
+
+            &:hover{
+                background-color: darken($color-primary, 5%);
+            }
+        }
+    }
+
+   
+
+    .dots{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+        gap: 1.5rem;
+    }
+
+    .dot{
+        width: 3rem;
+        height: 5px;
+        background-color: $color-grey-dark-2;
+
+        &.active{
+            background-color: $color-primary;
+        }
+    }
+}
+
+.amenities{
+    padding: 7rem 0;
+    @include twelveGridSystem;
+    grid-template-rows: repeat(9,5rem);
+
+    &__hero{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        grid-column: 1 / -1;
+        grid-row: 2 / span 7;
+    }
+}
+
+.our-rooms{
+    padding: 5rem 0;
+
+    &__top{
+        padding: 0 8rem;
+        margin-bottom: 10rem;
+
+        @include respond(phone){
+            text-align: center;
+        }
+    }
+
+ 
+}
+
+.reviews{
+    padding: 5rem 8rem;
+}
+

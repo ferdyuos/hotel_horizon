@@ -1,0 +1,49 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: $color-grey-light-1;
+    display: flex;
+    position: relative;
+
+   
+
+   &__logo{
+       color:$color-secondary ;
+        position: absolute;
+        top: 2rem;
+        font-size: large;
+        left: 2rem;
+        z-index: 8;
+    }
+    
+    .aside{
+        flex-basis: 30vw;
+        background-color: $color-secondary;
+        padding: 2em;
+        position: relative;
+        
+      
+        
+        .text-box{
+            width: 80%;
+            padding: 1rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            color: white;
+        }
+
+
+    }
+
+    .form-container{
+        flex: 1;
+        display: grid;
+        place-items: center;
+        overflow-y: auto;
+        padding: 3rem 0;
+    }
+}
+

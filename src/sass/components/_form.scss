@@ -1,0 +1,79 @@
+.form{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  h1{
+    color: $color-secondary;
+    margin-bottom: 6rem;
+  }
+
+  &__label{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__group{
+    padding: 8px;
+    background-color: $color-grey-light-2;
+    display: flex;
+    align-items: center;
+    gap:8px;
+    border: 2px solid transparent;
+
+
+    &:not(:last-child){
+      margin-bottom: 1.5rem;
+    }
+
+    &:focus-within{
+      border-color: $color-primary;
+    }
+  }
+
+  &__input{
+    padding: 1rem 0;
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: $color-secondary ;
+    font-size: 1.5rem;
+    &::placeholder{
+      color: $color-grey-dark-1;
+
+    }
+  }
+
+  &__icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: $color-grey-dark-1;
+  }
+
+  
+&__btn{
+  display: inline-block;
+  margin-top: 1.5rem ;
+  padding: 1.5rem 4rem;
+  color: white;
+  cursor: pointer;
+  background-color: $color-dark;
+  border: none;
+  align-self: center;
+
+  &:hover{
+    background-color: darken($color-dark, 5%);
+}
+
+}
+
+}
+  
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+

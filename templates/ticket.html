@@ -1,0 +1,174 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Ticket</title>
+    <style>
+        @page{
+            margin: 37px 50px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        body{
+            padding: 7% 7%;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .logo{
+            display: flex;
+        }
+        .header{
+            text-align: right;
+            font-size: 2em;
+            font-weight: 600;
+        }
+        li{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .col{
+            -ms-flex-preferred-size:0;
+            flex-basis:0;
+            -ms-flex-positive:1;
+            flex-grow:1;
+            max-width:100%
+        }
+        table{
+            margin-top: 0;
+            width: 100%;
+        }
+        .table{
+            margin-top: 25px;
+        }
+        tr{
+            width: 100%;
+        }
+        th{
+            width: 25%;
+            text-align: left;
+            padding: 5px 20px;
+        }
+        td{
+            width: 25%;
+            text-align: left;
+            padding: 5px 15px;
+        }
+        caption{
+            text-align: left;
+            background-color: #a9a9a9;
+            color: white;
+            padding: 8px 15px;
+            font-weight: bold;
+        }
+        .tr-caption{
+            text-align: left;
+            background-color: #a9a9a9;
+            color: white;
+            padding: 0;
+            font-weight: bold;
+            width: 100%;
+            font-size: 1.4em;
+        }
+        .tr-even{
+            background-color: #f0f0f0;
+        }
+        .tr-odd{
+            background-color: white;
+        }
+    </style>
+</head>
+ <body>
+    <nav>
+        <div class="col logo" style="width: 50%;">
+            <span style="color: rgb(225, 35, 35); font-weight: bold; font-size: 2.5em;">HOTEL HORIZON</span>
+        </div>
+        <div class="col header" style="width: 50%;">
+            <span style="margin: auto 0 auto auto;">E-Ticket</span>
+        </div>
+    </nav>
+    <hr style="height: 1px; border: 0; background-color: grey;" noshade>
+    <main style="padding: 10px;">
+        <div style="margin: 15px auto;">
+            <h3>Important information</h3>
+            <ul style="padding-left: 50px;">
+                <li>
+                    This is your E-Ticket Iternary. You must bring it to the hotel for check-in, and it is recommended you to retain a copy for your records.
+                </li>
+            </ul>
+        </div>
+        <div class="table-div">
+            <table class="table">
+                <tr class="tr-caption">
+                    <td style="width: 100%;">TICKET INFORMATION</td>
+                </tr>
+            </table>
+            <table cellspacing='0' >
+                <tr class="tr-odd">
+                    <th>TICKET REFERENCE</th>
+                    <td>{{booking.ref_code }}</td>
+                    <th>BOOKING DATE & TIME</th>
+                    <td>{{ booking.booked_date.date() }}<br>{{booking.booked_date.time() }}</td>
+                </tr>
+                <tr class="tr-even">
+                    <th>BOOKED DATE</th>
+                    <td>{{booking.date.date() }}  {{booking.date.time()}}</td>
+                    
+                </tr>
+                <tr class="tr-odd">
+                    <th>EMAIL</th>
+                    <td>{{user.email}}</td>
+                </tr>
+                <tr class="tr-even">
+                    <th>STATUS</th>
+                    <td>{{ booking.status.value }}</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+            </table>
+           
+            <table class="table">
+                <tr class="tr-caption">
+                    <td style="width: 100%; padding-left: 20px;">BOOKING INFORMATION</td>
+                </tr>
+            </table>
+            <table cellspacing='0'>
+                <tr class="tr-odd">
+                    <th>ROOM TYPE</th>
+                    <th>NUMBER OF GUESTS</th>
+                    <th>City</th>
+                    <th>Season</th>
+                </tr>
+                <tr class="tr-even">
+                    <td style="width: 29%; padding-left: 20px;">{{ booking.room_type.value }}</td>
+                    <td style="width: 22%; padding-left: 20px;">{{ booking.number_people }}</td>
+                    <td style="width: 22%; padding-left: 20px;">{{ booking.hotel.city }}</td>
+                    <td style="width: 22%; padding-left: 20px;">{{ booking.season.value }}</td>
+                </tr>
+            </table>
+
+
+            <table class="table">
+                <tr class="tr-caption">
+                    <td style="width: 100%;">PAYMENT DETAILS</td>
+                </tr>
+            </table>
+            <table cellspacing='0' style="width: 100vw;">
+                <tr class="tr-even">
+                    <th style="width: 35%;">AMOUNT PAID</th>
+                    <td style="width: 65%;">GBD {{ booking.amount }}</td>
+                    <td style="width: 35%;">STATUS</td>
+                    <td style="width: 65%;">success</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <p style="margin: 10px 0; font-size: .8em;">&#169;	 2020 Hotel Horizon Inc. All rights reserved.</p>
+</body>
+</html>

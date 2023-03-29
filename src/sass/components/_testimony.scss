@@ -1,0 +1,47 @@
+.testimonies{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 5rem;
+
+    .paragraph{
+        width: 40%;
+        margin: 0 auto;
+        
+        @include respond(phone){
+            width: 60%;
+    
+        }
+    }
+
+
+    @include respond(phone){
+        flex-direction: column;
+
+    }
+}
+
+.testimony{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    color: $color-secondary;
+    padding:3em;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px 0px,
+                rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+
+    &__profile{
+        border-radius: 50%;
+    }   
+    
+    &__name{
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+
+    &__text{
+        text-align: center;
+    }
+}

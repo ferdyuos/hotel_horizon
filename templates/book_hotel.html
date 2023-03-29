@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}
+  Simple CRUD with Flask
+{% endblock title %}
+
+{% block content %}
+
+<div class="content">
+  <h1> {{current_user.username}} please make your choice</h1>
+  {% if season == 'peak' %}
+  <h3>Please you would be charged at peak season rate</h3>
+  {% else %}
+  <h3>Please you would be charged at off-peak season rate</h3>
+  {% endif %}
+  <table>
+    <tr>
+      <th>Room Type</th>
+      <th>Peak Season Rate</th>
+      <th>Off Peak Season Rate</th>
+      <th>Number of guests</th>
+      <th>No. Available</th>
+      <th>Action</th>
+    </tr>
+    {% if details %}   
+      {% for detail in details %}
+        <tr>
+          <td>{{ detail.type }}</td>
+          <td>{{ detail.peak }}</td>
+          <td>{{ detail.off_peak }}</td>
+          <td>{{ detail.guest }}</td>
+          <td>{{ detail.room_total }}</td>
+          <td>
+            <a href="/confirm-booking/{{ id }}/{{ detail.type }}/{{ season }}">Confirm Booking</a>
+          </td>
+        </tr>
+      {% endfor %}
+    {% else %}
+    <tr>
+      <td colspan="6">
+      <h2 style="text-align:center;" >You have no Hotels</h2>
+      </td>
+    </tr>
+    {% endif %}
+  </table>
+</div>
+  
+{% endblock content %}

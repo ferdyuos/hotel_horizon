@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}
+  Simple CRUD with Flask
+{% endblock title %}
+
+{% block content %}
+
+<div class="content">
+  <h1>{{ current_user.username }}  Booking History</h1>
+  <table>
+    <tr>
+      <th>City</th>
+      <th>Room Type</th>
+      <th>Status</th>
+      <th>Ref Code</th>
+      <th>User</th>
+      <th>Date</th>
+      <th>Action</th>
+      <th></th>
+    </tr>
+    {% if bookings %}   
+      {% for booking in bookings %}
+        <tr>
+          <td>{{ booking.hotel.city }}</td>
+          <td>{{ booking.room_type.value }}</td>
+          <td>{{ booking.status.value }}</td>
+          <td>{{ booking.ref_code }}</td>
+          <td>{{ booking.user.username }}</td>
+          <td>{{ booking.date }}</td>
+          <td>
+            <a href="{{ url_for('cancel_booking', id=booking.id) }}">Cancel</a>
+          </td>
+        </tr>
+      {% endfor %}
+    {% else %}
+    <tr>
+      <td colspan="6">
+      <h2 style="text-align:center;" >No Bookings Available</h2>
+      </td>
+    </tr>
+    {% endif %}
+  </table>
+</div>
+  
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+  Simple CRUD with Flask
+{% endblock title %}
+
+{% block content %}
+
+<div class="content">
+  <h1>Confirm Booking</h1>
+  <div class="form-div">
+    <h3> Add a new task</h3>
+    <p> You will be charged {{ amount_payable }} </p>
+  <form action="." method="post">
+    <input type="datetime-local" id="date" name="date">
+    {% if room_type == 'double' %}
+    <input type="number" name="number_people" id="number_people" max="2" placeholder="How many people">
+    {% else if room_type == 'standard' %}
+        <input type="number" name="number_people" id="number_people" max="1" placeholder="How many people">
+    {% else %}
+        <input type="number" name="number_people" id="number_people" max="6" placeholder="How many people">
+    {% endif %}
+    <input type="submit" value="Proceed to payment"/>
+</div>
+  </form>
+</div>
+  
+{% endblock content %}

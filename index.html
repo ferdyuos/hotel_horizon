@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Horizon Hotels</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='src/sass/main.scss'>
+    <script src='src/js/main.js' type="module"></script>
+</head>
+<body>
+    
+
+
+    <main class="main">
+        <header class="header">
+            <div class="logo-box">
+                <h2 class="logo">Hotel Horizon</h2>
+            </div>
+    
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">About Us</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Resources</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Features</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Testimonies</a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <a href="src/pages/signup.html" class="cta">Sign up</a>
+        </header>
+
+        <section class="hero">
+            <div class="text-box">
+                <small class="text-small">The best</small>
+                <h1 class="heading-primary">The luxury room <br/> of your choice is <br/> right for you.</h1>
+                <p class="paragraphs">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda repudiandae consequatur, quisquam inventore ut soluta.
+                </p>
+            </div>
+
+            <figure class="search">
+                <div class="search__category-box">
+                    <div class="search__category search__category--1">
+                        <h3 class="search__title" data-search ="city">
+                            <span>Location</span>
+                            <svg class="search__icon">
+                                <use xlink:href="src/images/icon/sprite.svg#icon-chevron-small-down"></use>
+                            </svg>
+                        </h3>
+                        <div class="search__details">
+                            <small class="search__detail">Select</small>
+                        </div>
+                    </div>
+                    <div class="search__category search__category--2">
+                        <h3 class="search__title" data-search ="capacity">
+                            <span>Capacity</span>
+                            <svg class="search__icon">
+                                <use xlink:href="src/images/icon/sprite.svg#icon-chevron-small-down"></use>
+                            </svg>
+                        </h3>
+                        <div class="search__details">
+                            <small class="search__detail">Select</small>
+                           
+                        </div>
+                    </div>
+                    <div class="search__category search__category--3">
+                        <h3 class="search__title" data-search="price">
+                            <span>Max price</span>
+                            <svg class="search__icon">
+                                <use xlink:href="src/images/icon/sprite.svg#icon-chevron-small-down"></use>
+                            </svg>
+                        </h3>
+                        <div class="search__details">
+                            <small class="search__detail">Select</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="search__btn" type="button">
+                    <svg class="search__icon search__icon--large">
+                        <use xlink:href="src/images/icon/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+                            
+                <ul class="dropdown hidden"></ul>
+            </figure>
+
+        </section>
+
+        <section class="about">
+            <div class="text-box">
+                <small>Raising comfort to the highest level</small>
+                <h2 class="heading-secondary">Welcome to <br/> Hotel Horizon</h2>
+                <p class="about__desc">
+                    The Hotel Horizon is the right choice for visitors who are searching for a combination of charm, peace, quiet, and convenient position from where to explore surroundings.
+                </p>
+
+                <a href="#" class="btn">More info</a>
+            </div>
+
+            <img src="src/images/about-img.jpg" alt="about image" class="about__img">
+
+
+        </section>
+
+        <section class="display-rooms">
+            <div class="display-rooms__top">
+                <h2 class="heading-secondary">Choose your<br/> luxurios room</h2>
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptatibus. Quisquam, totam deleniti eligendi aut dignissimos quae, recusandae qui fuga saepe dolor consectetur accusantium corporis temporibus, magni a illum assumenda.</p>
+                <div>
+                    <button type="button" class="btn-ctrl btn-ctrl--inverted btn-ctrl--left">
+                        <svg class="btn-ctrl__icon">
+                            <use xlink:href="src/images/icon/sprite.svg#icon-chevron-left"></use>
+                        </svg>
+                    </button>
+
+                    <button type="button" class="btn-ctrl btn-ctrl--right">
+                        <svg class="btn-ctrl__icon">
+                            <use xlink:href="src/images/icon/sprite.svg#icon-chevron-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="room-gallery-cont">
+
+                <div class="room-gallery room-gallery--3">
+                    <img src="src/images/room-5.jpg" alt="room image" class="room-gallery__img">
+                    <img src="src/images/room-4.jpg" alt="room image" class="room-gallery__img">
+                    <img src="src/images/room-3.jpg" alt="room image" class="room-gallery__img">
+                    <img src="src/images/room-2.jpg" alt="room image" class="room-gallery__img">
+ 
+                    <figure class="room-gallery__card">
+                        <small class="room-gallery__title">Our Family Room</small>
+                        <p class="room-gallery__desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam accusantium, quos odit, nobis cum quod magni tenetur alias adipisci quibusdam harum natus reiciendis pariatur corrupti voluptas vitae animi aspernatur.
+                         </p>
+                         <a href="src/pages/search-results.html" class="room-gallery__btn">Book now &rarr;</a>
+                    </figure>
+                </div>
+
+                <div class="room-gallery room-gallery--2">
+                   <img src="src/images/room-5.jpg" alt="room image" class="room-gallery__img">
+                   <img src="src/images/room-4.jpg" alt="room image" class="room-gallery__img">
+                   <img src="src/images/room-3.jpg" alt="room image" class="room-gallery__img">
+                   <img src="src/images/room-2.jpg" alt="room image" class="room-gallery__img">
+
+                   <figure class="room-gallery__card">
+                       <small class="room-gallery__title">Our Double Room</small>
+                       <p class="room-gallery__desc">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam accusantium, quos odit, nobis cum quod magni tenetur alias adipisci quibusdam harum natus reiciendis pariatur corrupti voluptas vitae animi aspernatur.
+                        </p>
+                        <a href="src/pages/search-results.html" class="room-gallery__btn">Book now &rarr;</a>
+                   </figure>
+                </div>
+
+                <div class="room-gallery room-gallery--1">
+                    <img src="src/images/room-5.jpg" alt="room image" class="room-gallery__img">
+                    <img src="src/images/room-4.jpg" alt="room image" class="room-gallery__img">
+                    <img src="src/images/room-3.jpg" alt="room image" class="room-gallery__img">
+                    <img src="src/images/room-2.jpg" alt="room image" class="room-gallery__img">
+ 
+                    <figure class="room-gallery__card">
+                        <small class="room-gallery__title">Our Standard Room</small>
+                        <p class="room-gallery__desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam accusantium, quos odit, nobis cum quod magni tenetur alias adipisci quibusdam harum natus reiciendis pariatur corrupti voluptas vitae animi aspernatur.
+                         </p>
+                         <a href="src/pages/search-results.html" class="room-gallery__btn">Book now &rarr;</a>
+                    </figure>
+                </div>
+
+                
+            </div>
+
+        </section>
+
+        <section class="amenities">
+            <img src="src/images/amenities-hero.jpg" alt="amenities-hero" class="amenities__hero">
+            <figure class="card">
+                <h2 class="card__title">Our Amenities</h2>
+                <p class="card__description">
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium aperiam cupiditate consequuntur sequi. Veniam, odit laborum veritatis, laboriosam non alias rem asperiores impedit sunt libero eos aliquid voluptatem repellat ipsam quo, ratione sit autem? Voluptatibus assumenda numquam nisi qui placeat?
+                </p>
+
+                <ul class="card__list"> 
+                    <li class="card__item">
+                        <svg class="card__icon">
+                            <use xlink:href="src/images/icon/sprite.svg#icon-chevron-right"></use>
+                        </svg>
+
+                        Swimming pool
+                    </li>
+                    <li class="card__item">
+                        <svg class="card__icon">
+                            <use xlink:href="src/images/icon/sprite.svg#icon-chevron-right"></use>
+                        </svg>
+
+                        Gym & yoga
+                    </li>
+                    <li class="card__item">
+                        <svg class="card__icon">
+                            <use xlink:href="src/images/icon/sprite.svg#icon-chevron-right"></use>
+                        </svg>
+
+                        Spa & massage
+                    </li>
+                    <li class="card__item">
+                        <svg class="card__icon">
+                            <use xlink:href="src/images/icon/sprite.svg#icon-chevron-right"></use>
+                        </svg>
+
+                        Restaurant
+                    </li>
+                    <li class="card__item">
+                        <svg class="card__icon">
+                            <use xlink:href="src/images/icon/sprite.svg#icon-chevron-right"></use>
+                        </svg>
+
+                        24/7 WiFi
+                    </li>
+                    <li class="card__item">
+                        <svg class="card__icon">
+                            <use xlink:href="src/images/icon/sprite.svg#icon-chevron-right"></use>
+                        </svg>
+
+                        Animal Friendly
+                    </li>
+                </ul>
+            </figure>
+
+        </section>
+
+        <section class="our-rooms">
+            <div class="our-rooms__top">
+                <h2 class="heading-secondary">More than just a hotel</h2>
+                <p class="paragraph">discover pure comfort with home and apartment</p>
+            </div>
+
+            <div class="room-cards">
+                <div class="room-card">
+                    <img src="src/images/room-5.jpg" alt="card image" class="room-card__image">
+                    <h3 class="room-card__location">Nottingham</h3>
+                    <small class="room-card__review">(5k reviews)</small>
+                    <button data-query="?query=Nottingham" class="room-card__btn">Book now</button>
+                </div>
+
+                <div class="room-card">
+                    <img src="src/images/room-4.jpg" alt="card image" class="room-card__image">
+                    <h3 class="room-card__location">Manchester</h3>
+                    <small class="room-card__review">(13k reviews)</small>
+                    <button data-query="?query=Manchester" class="room-card__btn">Book now</button>
+                </div>
+               
+                <div class="room-card">
+                    <img src="src/images/room-3.jpg" alt="card image" class="room-card__image">
+                    <h3 class="room-card__location">London</h3>
+                    <small class="room-card__review">(15k reviews)</small>
+                    <button data-query="?query=London" class="room-card__btn">Book now</button>
+                </div>
+               
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2 class="heading-secondary" align="center">What does our customers say?</h2>
+            <p class="paragraph" align="center"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur quo beatae quasi quisquam.</p>
+
+            <div class="testimonies">
+                <div class="testimony">
+                    <img src="src/images/user-3.jpg" alt="profile image" class="testimony__profile">
+                    <small class="testimony__name">Andreas Iniesta</small>
+                    <blockquote class="testimony__text">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit distinctio, ratione ex aliquam, voluptas nihil quaerat saepe beatae architecto ipsam tenetur. Repudiandae molestiae laboriosam reiciendis porro illo id distinctio dolore?"</blockquote>
+                </div>
+
+                <div class="testimony">
+                    <img src="src/images/user-2.jpg" alt="profile image" class="testimony__profile">
+                    <small class="testimony__name">Kira Kosarin</small>
+                    <blockquote class="testimony__text">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit distinctio, ratione ex aliquam, voluptas nihil quaerat saepe beatae architecto ipsam tenetur. Repudiandae molestiae laboriosam reiciendis porro illo id distinctio dolore?"</blockquote>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <ul class="footer__nav">
+              <li class="footer__item">
+                <a class="footer__link" href="#">About</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Pricing</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Terms of Use</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Privacy Policy</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Blog</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <p class="footer__copyright">
+              &copy; Copyright by
+              <a class="footer__link twitter-link" target="_blank" href="https://twitter.com/jonasschmedtman">Your Name</a>
+            </p>
+        </footer>
+        
+        <a href="src/pages/reservation.html" hidden>reservation</a>      
+        <a href="src/pages/payment.html" hidden>payment</a>
+
+    </main>
+</body>
+</html>

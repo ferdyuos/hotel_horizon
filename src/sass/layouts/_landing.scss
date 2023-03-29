@@ -1,0 +1,134 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(
+        to right,
+        rgba($color-grey-light-1,1) 0%,
+        rgba($color-grey-light-1,1) 7%,
+        rgba($color-grey-light-1,0.3) 70%,
+        rgba($color-grey-light-1,0.1)
+    ), url('/src/images/hero.jpg');
+    background-size: cover;
+    background-position:bottom;
+    @include twelveGridSystem;
+
+    @include respond(phone){
+        background-image:linear-gradient(
+            rgba($color-grey-light-1,.5),
+            rgba($color-grey-light-1,.5)
+        ), url('/src/images/hero.jpg');
+        background-position:center;
+
+    }
+
+
+
+  
+}
+
+.text-box{
+    grid-column: 2 / span 4;
+    grid-row: 3 / auto;
+    margin: 1.5rem 0;
+    color:$color-secondary;
+    @include respond(tab-port){
+        grid-column: 2 / span 6;
+
+    }
+    @include respond(phone){
+        grid-column: 2 / span 10;
+        grid-row-start: 2;
+        text-align: center;
+
+    }
+}
+
+.search{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2 / span 7;
+    grid-row-start: 6;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px 0px,
+                rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+
+    @include respond(tab-port){
+        grid-column: 2 / span 8;
+
+    }
+    @include respond(phone){
+        grid-column: 2 / span 10;
+        grid-row-start: 5;
+
+
+    }
+
+    &__category-box{
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: $color-grey-light-1;
+        padding:1.5em 2em;
+    }
+    
+   
+    
+    &__title{
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        cursor: pointer;
+        color: $color-secondary;
+    }
+
+    &__icon{
+        width: 2rem;
+        height: 2rem;
+        fill: currentColor;
+
+        &--large{
+            width: 4rem;
+            height: 4rem
+        }
+    }
+
+    
+    .dropdown{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: $color-dark;
+        color: white;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        &__item{
+            padding: 1rem 2em;
+            cursor: pointer;
+            &:hover{
+                background-color:lighten( $color-dark,5%) ;
+            }
+        }
+
+    }
+
+    &__btn{
+        flex-basis:10rem;
+        border: none;
+        color: $color-grey-light-1;
+        background-color: $color-primary;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            background-color: darken($color-primary, 5%);
+        }
+    }
+
+
+}

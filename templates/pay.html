@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+  Simple CRUD with Flask
+{% endblock title %}
+
+{% block content %}
+
+<div class="content">
+  <h1>Payment</h1>
+  <div class="form-div">
+    <p>{{ discount_details.message }}</p>
+  <form action="." method="post">
+    To Pay:<input type="text" name="amount_payable" value="{{ amount_payable }}" disabled> <br>
+    Card Detail: <input type="text" name="card_details" placeholder="Enter card details">
+    <input type="submit" value="Payment"/>
+</div>
+  </form>
+</div>
+  
+{% endblock content %}

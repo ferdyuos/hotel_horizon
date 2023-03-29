@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Horizon Hotels | Sign up</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='/src/sass/main.scss'>
+    <script src="../js/signup.js" type="module"></script>
+
+</head>
+<body>
+    <main class="container">
+        <a href="/" title="Return">
+            <h2 class="container__logo" style="color: white;">Hotel Horizon</h2>
+        </a>
+
+        <aside class="aside">
+            
+            <div class="text-box">
+
+                <h1 class="heading-primary">Wecome back!</h1>
+                <p class="paragraphs">
+                   To stay connected with us please login with your personal info.
+                </p>
+
+                <a href="signin.html" class="btn">Sign in</a>
+
+            </div>
+        </aside>
+        <section class="form-container">
+            <form class="form">
+                <h1 class="heading-primary" align="center">Create Account</h1>
+                <div class="form__group">
+                    <svg class="form__icon">
+                        <use xlink:href="/src/images/icon/sprite.svg#icon-user"></use>
+                    </svg>
+                    <input required type="text" class="form__input" placeholder="Name">
+                </div>
+                <div class="form__group">
+                    <svg class="form__icon">
+                        <use xlink:href="/src/images/icon/sprite.svg#icon-mail"></use>
+                    </svg>
+                    <input required type="email" class="form__input" placeholder="Email">
+                </div>
+                <div class="form__group">
+                    <svg class="form__icon">
+                        <use xlink:href="/src/images/icon/sprite.svg#icon-lock"></use>
+                    </svg>
+                    <input required type="password" class="form__input" placeholder="Password">
+                </div>
+
+                <button type="submit" class="form__btn">Sign up</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
